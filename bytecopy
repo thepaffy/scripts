@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "Bitte Datei von der gelesen wird angeben: " inFile
+read -p "Bitte Datei auf die geschrieben wird angeben: " outFile
+read -p "Bitte Anzahl der durchläufe angeben: " count
+
+i=0
+
+while [ $i -lt $count ]
+do
+    $(dd if=$inFile of=$outfile)
+    i=$($i+1)
+done
+
+if [ count -gt 1 ]
+then
+    echo "Datei $outfile wurde $count mal mit der Datei $inFile überschrieben."
+else
+    echo "Datei $outfile wurde mit der Datei $inFile überschrieben." 
+fi
