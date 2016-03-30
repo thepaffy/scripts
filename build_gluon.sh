@@ -30,7 +30,7 @@ if [ ! -d "$SITEDIR" ]; then
     git clone git@github.com:FreifunkWesterwald/sites.git $SITEDIR
 else
     cd $SITEDIR
-	git pull
+    git pull
 fi
 
 # set environment variabels
