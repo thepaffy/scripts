@@ -7,7 +7,9 @@ GLUONBRANCH=v2016.1.x
 # Gluon target
 TARGET=ar71xx-generic
 # Site directory
-SITEDIR=/home/thepaffy/ffww/sites/neuwied
+SITEDIR=/home/thepaffy/ffww/sites
+# Site
+SITE=neuwied
 # Release name
 RELEASE=3.1-paffy
 # Gluon branch
@@ -20,6 +22,7 @@ echo "GLUONDIR:    $GLUONDIR"
 echo "GLUONBRANCH: $GLUONBRANCH"
 echo "TARGET:      $TARGET"
 echo "SITEDIR:     $SITEDIR"
+echo "SITE:        $SITE"
 echo "RELEASE:     $RELEASE"
 echo "BRANCH:      $BRANCH"
 echo "PROMOTEDIR:  $PROMOTEDIR"
@@ -34,7 +37,7 @@ else
 fi
 
 # set environment variabels
-export GLUON_SITEDIR=$SITEDIR
+export GLUON_SITEDIR=$SITEDIR/$SITE
 export GLUON_RELEASE=$RELEASE
 export GLUON_BRANCH=$BRANCH
 
